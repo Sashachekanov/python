@@ -18,13 +18,17 @@ def draw():
     ellipse(x,y,50,50)
     if keyPressed:
         if key == 'w':
-            y=y-5
+            if y > 10:
+                y -= 5
         if key == 's':
-            y=y+5
+            if y < 990:
+                y +=5
         if key == 'a':
-            x=x-5
+            if x > 10:
+                x -= 5
         if key == 'd':
-            x=x+5
+            if x < 1000:
+                x += 5
 
     textSize(20)
     text(k,20,30)
@@ -69,3 +73,6 @@ def draw():
         fill(255)
         textSize(100)
         text ("you died", 500,500)
+        img = loadImage ("mishka fraddy.jpg")
+        image(img,100,300,300,300)
+        
